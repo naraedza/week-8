@@ -11,6 +11,7 @@ namespace twozerofoureight
         protected int boardSize; // default is 4
         protected int[,] board;
         protected Random rand;
+        protected int score = 0;
 
         public TwoZeroFourEightModel() : this(4)
         {
@@ -101,7 +102,7 @@ namespace twozerofoureight
                     board[k, i] = 0;
                 }
             }
-            board = Random(board);
+            board = Random(board);    
             NotifyAll();
         }
 
@@ -155,6 +156,7 @@ namespace twozerofoureight
             }
             board = Random(board);
             NotifyAll();
+      
         }
 
         public void PerformRight()
