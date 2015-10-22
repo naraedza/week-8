@@ -21,6 +21,7 @@ namespace twozerofoureight
             {
                 m.Notify(this);
             }
+
         }
 
         public void AttachObserver(View m)
