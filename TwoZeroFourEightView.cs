@@ -29,18 +29,11 @@ namespace twozerofoureight
         public void Notify(Model m)
         {
             UpdateBoard(((TwoZeroFourEightModel) m).GetBoard());
-            UpdateScore(((TwoZeroFourEightModel)m).GetBoard());
+            UpdateScore(((TwoZeroFourEightModel)m).getScore());
         }
-        public void UpdateScore(int[,] board)
+        public void UpdateScore(int score)
         {
-           int score = 0;
-           for (int i=0; i< 4; i++)
-            {
-                for(int j=0; j<4;j++)
-                {
-                    score = score + board[i, j];
-                }
-            }
+           
             lblScore.Text = Convert.ToString(score);
             scorebox.Score(score);
             scorebox.Show();

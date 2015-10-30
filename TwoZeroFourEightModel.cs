@@ -52,7 +52,18 @@ namespace twozerofoureight
             }
             return input;
         }
-
+        public int getScore()
+        {
+            int score = 0;
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    score = score + board[i, j];
+                }
+            }
+            return score;
+        }
         public void PerformDown()
         {
             int[] buffer;
