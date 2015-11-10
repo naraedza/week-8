@@ -52,7 +52,7 @@ namespace twozerofoureight
             }
             return input;
         }
-        public int getScore()
+        public int GetScore()
         {
             int score = 0;
             for (int i = 0; i < 4; i++)
